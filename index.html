@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <div id="date-container">
+        <h1 id="date-header">Today is: </h1>
+    </div>
+    <div id="image-container">
+        <img id="image" src="">
+        <a id="prev-button">&#10094;</a>
+        <a id="next-button">&#10095;</a>
+    </div>
+    <div id="weather-container">
+        <h2 id="weather-header">Weather</h3>
+            <p id="temperature" class="weather"></p>
+            <p id="precipitation" class="weather"></p>
+            <p id="wind" class="weather"></p>
+            <p id="humidity" class="weather"></p>
+    </div>
+    <div id="goals-container">
+        <h2 id="goals-header">Daily Goals</h2>
+        <div id="goals-form-container">
+            <form id="goals">
+                <input type="textbox" id="new-goal">
+                <button type="submit">Add Goal</button>
+            </form>
+        </div>
+        <div id="goals-list-container">
+            <ul id="goals-list">
+                <li class="goal" onclick="goalStrikeThrough()">Wake Up</li>
+            </ul>
+        </div>
+    </div>
+    <div id="quote-container">
+        <h2 id="quote">"A positive mindset brings positive things."</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+
+</footer>
+
+</html>
