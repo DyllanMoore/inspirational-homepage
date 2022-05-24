@@ -9,8 +9,6 @@ function getDate() {
     dateHeader.innerHTML = `Today is: ${month} ${day}, ${year}`;
 }
 
-getDate();
-
 // Picture Carousel
 const imageArray = [
     { img: "https://cf.ltkcdn.net/dogs/images/orig/236742-1600x1030-cutest-puppy-videos.jpg" },
@@ -64,7 +62,6 @@ fetch("https://api.weatherapi.com/v1/current.json?key="
 
 function displayCurrentWeather(data) {
     const weather = data.current;
-    console.log(weather);
     const currentTemperature = document.getElementById("temperature").innerHTML = `${weather.temp_f} \u00B0 F`;
     const currentWindSpeed = document.getElementById("wind").innerHTML = `Wind Speed: ${weather.wind_mph} mph`;
     const currentPrecipitation = document.getElementById("precipitation").innerHTML = `Precipitation: ${weather.precip_in} in.`;
@@ -114,6 +111,51 @@ function createNewGoal() {
 
 // Quote Carousel
 
-function showQuote() {
-
+const quoteArray = [{
+    quote: `"When you have a dream, you’ve got to grab it and never let go."`,
+    author: "Carol Burnett"
+},
+{
+    quote: `“Nothing is impossible. The word itself says ‘I’m possible!'”`,
+    author: `Aubrey Hepburn`
+},
+{
+    quote: `“There is nothing impossible to they who will try.”`,
+    author: `Alexander the Great`
+},
+{
+    quote: `“The bad news is time flies. The good news is you’re the pilot.”`,
+    author: `Michael Altshuler`
+},
+{
+    quote: `“Keep your face always toward the sunshine, and shadows will fall behind you.”`,
+    author: `Walt Whitman`
+},
+{
+    quote: `“Success is not final, failure is not fatal: it is the courage to continue that counts.”`,
+    author: `Winston Churchill`
+},
+{
+    quote: `“You are never too old to set another goal or to dream a new dream.”`,
+    author: `Malala Yousafzai`
+},
+{
+    quote: `“It is during our darkest moments that we must focus to see the light.”`,
+    author: `Aristotle`
 }
+];
+
+function showQuote() {
+    const todayDay = new Date();
+    const dayOfWeek = todayDay.getDay();
+    const quoteOfDay = quoteArray[dayOfWeek].quote;
+    const authorOfDay = quoteArray[dayOfWeek].author;
+    const quoteElement = document.getElementById("quote");
+    const authorElement = document.getElementById("author");
+
+    quoteElement.innerHTML = quoteOfDay;
+    authorElement.innerHTML = authorOfDay;
+}
+
+getDate();
+showQuote();
