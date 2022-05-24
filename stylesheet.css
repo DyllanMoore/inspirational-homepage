@@ -1,0 +1,185 @@
+/* Universal */
+:root {
+    --primary-font: 'Barlow', sans-serif;
+    --secondary-font: 'Roboto Slab', serif;
+
+    --primary: #36c9b7;
+    --dark: #233b38;
+    --light: #ebf5f4;
+}
+
+/* Background */
+body {
+    background-image: url(https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg?w=900&t=st=1653420481~exp=1653421081~hmac=69735babf94fb380683624da364c359e3de12a70e1affbc09f1b518633e955a9);
+    background-size: cover;
+}
+
+/* Date */
+#date-header {
+    font-family: var(--primary-font);
+    font-size: 30pt;
+    text-align: center;
+    color: var(--dark);
+    height: 10vh;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Image Carousel */
+#image-container {
+    height: 40vh;
+    margin: 0%;
+    padding: 0%;
+}
+
+#image {
+    width: auto;
+    height: 40vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#prev-button,
+#next-button {
+    display: block;
+    position: absolute;
+    top: 25%;
+    font-size: 50pt;
+    color: var(--dark)
+}
+
+#prev-button {
+    left: 5%;
+}
+
+#next-button {
+    right: 5%;
+}
+
+#prev-button:hover,
+#next-button:hover {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+/* Weather */
+#weather-container {
+    height: 25vh;
+    width: 30vw;
+    background-color: rgba(35, 59, 56, 0.4);
+    display: block;
+    left: 0%;
+    top: 55vh;
+    position: fixed;
+}
+
+#weather-header {
+    font-family: var(--primary-font);
+    color: var(--primary);
+    font-size: 25pt;
+    margin: 0%;
+    padding-left: 5%;
+}
+
+.weather {
+    font-family: var(--secondary-font);
+    color: var(--light);
+    font-size: 18pt;
+    padding-top: 2%;
+    padding-left: 5%;
+    margin: 0%;
+}
+
+/* Goals */
+#goals-container {
+    display: block;
+    position: fixed;
+    top: 55vh;
+    right: 0%;
+    height: 25vh;
+    width: 70vw;
+    background-color: rgba(35, 59, 56, 0.4);
+    margin: 0%;
+    text-align: left;
+}
+
+#goals-header {
+    font-family: var(--secondary-font);
+    font-size: 25pt;
+    color: var(--primary);
+    margin-top: 3vh;
+}
+
+#new-goal {
+    width: 25vw;
+    height: 3vh;
+    font-family: var(--secondary-font);
+    font-size: 12pt;
+}
+
+#new-goal-button:hover {
+    cursor: pointer;
+}
+
+#goals-list {
+    font-family: var(--secondary-font);
+    font-size: 18pt;
+    list-style: none;
+    color: var(--light);
+    margin: 2%;
+    position: fixed;
+    width: 30vw;
+    top: 55vh;
+    right: 0%;
+}
+
+.goal:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+    text-decoration-color: var(--dark);
+}
+
+.close {
+    color: red;
+    margin: 2%;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    text-decoration-color: var(--dark);
+}
+
+/* Quote */
+#quote-container {
+    position: fixed;
+    width: 100vw;
+    top: 80%;
+}
+
+#quote,
+#author {
+    text-align: center;
+}
+
+#quote {
+    font-family: var(--secondary-font);
+    color: var(--dark);
+    font-size: 30px;
+}
+
+#author {
+    font-family: var(--secondary-font);
+    color: var(--primary);
+    font-size: 25px;
+}
+
+/* Freepik Source */
+a {
+    position: fixed;
+    bottom: 1%;
+}
