@@ -90,11 +90,12 @@ function createClose(targetElement) {
 }
 
 function goalStrikeThrough() {
-    const goal = document.getElementsByClassName(goal);
+    const goal = document.querySelector("li");
     if (goal.classList.contains("linethrough")) {
         goal.classList.remove("linethrough")
-    }
-    goal.classList.add("linethrough");
+    } else {
+        goal.classList.add("linethrough")
+    };
 }
 
 function createNewGoal() {
